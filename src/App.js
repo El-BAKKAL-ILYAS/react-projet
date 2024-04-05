@@ -1,24 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Layout from './components/Layout';
+import Etudiants from './components/étudiants';
 function App() {
+  const etudiants= [ {
+    prénom: "ilyas",
+    nom: "el bakkali",
+    année: 1999,
+  },
+  {
+    prénom: "soumaya",
+    nom: "el bakkali",
+    année: 2001,
+  }];
+  const style={
+    color:'red',background:'green'
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout>
+      <h1>bonjour</h1>
+      <Etudiants look={style} data={etudiants} note='17' color='blue'/>
+    </Layout>
   );
 }
 
